@@ -1,0 +1,17 @@
+├── Frontend (React)
+│   ├── Dashboard
+│   ├── Plant Management
+│   ├── Allocation Module
+│   └── Analytics
+│
+├── Backend (FastAPI)
+│   ├── REST API
+│   ├── Database Models
+│   ├── Optimization Engine
+│   └── Analytics Service
+│
+└── Database (PostgreSQL)
+    ├── Plants Table
+    ├── Grinding Units Table
+    ├── Allocations Table
+    └── Transportation Logs Table
