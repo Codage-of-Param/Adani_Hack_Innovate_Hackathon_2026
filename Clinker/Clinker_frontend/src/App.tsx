@@ -900,7 +900,7 @@ const ClinkerAllocationSystem = () => {
                       <AlertTriangle className="w-5 h-5" />
                       <div>
                         <p className="font-bold">Backend Connection Error</p>
-                        <p className="opacity-80">{error}. Please ensure the FastAPI server is running on localhost:8000.</p>
+                        <p className="opacity-80">{error}</p>
                       </div>
                     </motion.div>
                   )}
