@@ -285,7 +285,7 @@ const ClinkerAllocationSystem = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:8000/data/Optimization_Results.xlsx');
+      const response = await fetch('https://Clinker allocation backend.onrender.com/data/Optimization_Results.xlsx');
       if (!response.ok) throw new Error('Failed to fetch backend data');
       const result = await response.json();
 
@@ -342,7 +342,7 @@ const ClinkerAllocationSystem = () => {
   const handleRunOptimization = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/optimize', { method: 'POST' });
+      const response = await fetch('https://Clinker allocation backend.onrender.com/optimize', { method: 'POST' });
       if (!response.ok) {
         const errData = await response.json();
         throw new Error(errData.detail || 'Failed to start optimization');
@@ -407,7 +407,7 @@ const ClinkerAllocationSystem = () => {
       const transitTime = Math.round((distance / speed) * 24);
 
       // Save to Excel via Backend
-      const saveResponse = await fetch('http://localhost:8000/save-allocation', {
+      const saveResponse = await fetch('https://Clinker allocation backend.onrender.com/save-allocation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -463,7 +463,7 @@ const ClinkerAllocationSystem = () => {
 
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/update-status', {
+      const response = await fetch('https://Clinker allocation backend.onrender.com/update-status', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
