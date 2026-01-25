@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react";
 import { TrendingUp, TrendingDown, AlertTriangle, Truck, Factory, MapPin, Settings, Menu, X, DollarSign, Package, Clock, Filter, Plus, Trash2, Check, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -1533,6 +1534,7 @@ const ClinkerAllocationSystem = () => {
       </div>
 
       <AddAllocationModal />
+      <Analytics />
     </div>
   );
 };
